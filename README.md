@@ -6,11 +6,11 @@ A game of discovery and wisdom wherein you navigate the treetops as Falaj, the f
 
 ## Swinging
 
-Although Falaj can walk and leap, his most identifying mode of traversal is by swinging between the boughs of the trees. Long, somewhat elastic arms enable this.
+Although Falaj can walk and leap, his most identifying mode of traversal is a graceful swinging between the boughs of the trees. Long, somewhat elastic arms enable this.
 
 ## Day and Night
 
-Day and night are short in Our Father's Forest
+Day and night are short in Our Father's Forest and they each bring dramatic changes to the landscape. During the day, eagles from the ocean flit through the skies and during the night, forest fairies waft through the gentle night breeze, casting a soft glow on the brush and vines.
 
 # Cast
 
@@ -67,6 +67,10 @@ The forest is lush with blue and red capped mushrooms which, if eaten, cause the
 ## The Wisdom Dispensary
 
 The wisdom dispensary is the hidden domicile of Our Natural Father. Entry to The Wisdom Dispensary is allowed only to those who bring acceptable offerings.
+
+## Wisdom Nuggets
+
+Our Natural Father, if appeased, is known to give wisdom nuggets to his visitors. A wisdom nugget appears to be a small chunk of ore of unknown origin (unusual, given that there are certainly no mines in the forest). In some ways, wisdom nuggets are serializations of the realizations one usually enjoys while conversing with Our Father. It's certainly worth storing these in a safe place for future consultation!
 
 ## Forest Fairies
 
