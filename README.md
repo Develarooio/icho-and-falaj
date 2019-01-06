@@ -54,11 +54,11 @@ Icho and Falaj are not alone in the forest wanderings. Indeed, the forest is ful
 
 ## Stones
 
-The forest floor is littered with mossy stones of various sizes. Falaj can carry a number of stones of varying sizes. If he encounters (or places) a stone on the forest floor, he may stack another smaller stone on top of it in order to build a shrine.
+The forest floor is littered with mossy stones. Falaj can carry a number of stones of varying sizes. If he encounters (or places) a stone on the forest floor, he may stack another smaller stone on top of it in order to build a cairn.
 
-## Shrines
+## Cairns
 
-Shrines are stacks of stone built on the forest floor. Forest beings find comfort in proximity to these shrines and at night they congregate around them, enjoying their soft glow and a sense of togetherness. Larger shines glow brighter and thus attract more forest denizens. In some cases, if a shrine is big enough, the night dark enough, and the moon bright enough, forest fairies will travel to the shrine and perform rituals. If Icho is present during one of these events, it's possible that one of the blue spirits will appear.
+Cairns are stacks of stone built on the forest floor. Forest beings find comfort in proximity to these cairns and at night they congregate around them, enjoying their soft glow and a sense of togetherness. Larger cairns glow brighter and thus attract more forest denizens. In some cases, if a cairn is big enough, the night dark enough, and the moon bright enough, forest fairies will travel to the cairn and perform rituals. If Icho is present during one of these events, it's possible that one of the blue spirits will appear.
 
 ## Mushrooms
 
