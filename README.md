@@ -50,7 +50,7 @@ Icho and Falaj are not alone in the forest wanderings. Indeed, the forest is ful
 
 
 
-# Mechanics
+# Environment
 
 ## Stones
 
@@ -75,3 +75,71 @@ Our Natural Father, if appeased, is known to give wisdom nuggets to his visitors
 ## Forest Fairies
 
 In the darkest nights, the forest is still lit by the most minor of the forest spirits. Sometimes mistaken for fireflies, the fairies of the forest are aimless but not purposeless and drift between the trees unhurriedly.
+
+
+
+# Mechanics Breakdown
+
+### Game Objects
+
+* Falaj
+* Icho
+* Wisdom Dispensary
+* Our Natural Father
+* Stones
+* Cairns
+* Fairies
+* Buds
+* Wisdom Nuggets
+* Map
+* Game
+* Blue Spirits
+
+### Behaviors
+
+* There is a Game which
+  * is started once
+  * is saved many times
+  * can be reopened
+  * has one Map
+* There is a Map which
+  * is generated when it's Game is started
+  * has an upper bound in the sky
+  * has a lower bound at the forest floor
+  * has platforms which Falaj can stand on
+  * has attachment points which Falaj can grab onto and swing from
+  * has one Wisdom Dispensary
+  * has many Buds distributed around it
+* There are Rocks which
+  * appear randomly around the map
+  * may be one of many sizes
+* There are Cairns which
+  * are composed of many rocks of successively smaller sizes
+* There is Falaj who
+  * can walk left or right
+  * can hop
+  * can throw his arms which begin as a default length and rotate clockwise until they reach a lower limit at which point they retract
+  * can lengthen or retract his arms while they are deployed (either being thrown or attached to a ledge or branch)
+  * while holding the edge of a platform with his arms, can retract them until he is level with the platform, at which point he can mantel onto the platform
+  * will swing if he grabs a branch with non-zero x momentum
+  * can initiate a swing while statically holding a branch by rocking back and forth
+  * can pick up rocks
+  * can carry a number of rocks as long as their total weight is below a limit
+  * can stack rocks
+  * can engage in conversation with his Buds
+  * can pick and consume mushrooms
+  * has a mane which grows in length with his wisdom
+* There is Icho who
+  * holds on to Falaj's mane  
+  
+  
+
+
+
+
+
+
+
+
+
+
