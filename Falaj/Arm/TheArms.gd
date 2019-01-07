@@ -20,3 +20,7 @@ func throw(direction):
 		$AnimationPlayer.play('arms_throw_left')
 	else:
 		$AnimationPlayer.play('arms_throw_right')
+
+func _on_GrabArea_body_entered(body):
+	if body.is_in_group('grabable'):
+		pass
