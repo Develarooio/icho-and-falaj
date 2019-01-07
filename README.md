@@ -36,7 +36,7 @@ Tango is the livelier of the blue spirits and her laughing energizes and rejuven
 
 ### Our Natural Father
 
-The oldest and most centered of the forest beings, Our Natural Father whiles away infinite hours in the Wisdom Dispensary,  communicating only in cryptic sayings. If one stops to listen to his sayings, Our Natural Father is likely to bequeath them with a wisdom nugget as a gift.
+The oldest and most centered of the forest beings, Our Natural Father whiles away infinite hours in the Wisdom Dispensary,  communicating only in cryptic aphorisms. If one stops to listen to his sayings, Our Natural Father is likely to bequeath them with a wisdom nugget as a gift.
 
 ## Buds
 
