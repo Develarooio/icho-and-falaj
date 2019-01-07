@@ -122,6 +122,7 @@ In the darkest nights, the forest is still lit by the most minor of the forest s
     * determines the likelihood that the rock will break if a Cairn it composes is knocked over by the wind
 * There are Cairns which
   * are composed of many rocks of successively smaller sizes
+  * Falaj can pick the topmost rock off of
   * have a size which
     * determines how likely a Blue Spirit is to appear there
   * at night, attract Fairies
