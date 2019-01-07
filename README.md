@@ -110,11 +110,29 @@ In the darkest nights, the forest is still lit by the most minor of the forest s
   * has attachment points which Falaj can grab onto and swing from
   * has one Wisdom Dispensary
   * has many Buds distributed around it
+  * has a constantly-progressing time which
+    * determines whether it should be night or day
+  * has a moon which
+    * only appears at night
+    * varies in brightness from night to night
 * There are Rocks which
   * appear randomly around the map
   * may be one of many sizes
+  * have a fragility which
+    * determines the likelihood that the rock will break if a Cairn it composes is knocked over by the wind
 * There are Cairns which
   * are composed of many rocks of successively smaller sizes
+  * have a size which
+    * determines how likely a Blue Spirit is to appear there
+  * at night, attract Fairies
+  * have a Fairy attraction radius which
+    * increases with size
+    * determines how close a Fairy must be in order to wander toward the cairn
+  * have a Fairy ownership radius which
+    * indicates how close a Fairy must be to be considered contained by the cairn
+  * have a Fairy saturation number which
+    * indicates how many Fairies the Cairn must contain in order to summon a Blue Spirit
+  * at day, may be knocked over by wind
 * There is Falaj who
   * can walk left or right
   * can hop
@@ -130,16 +148,36 @@ In the darkest nights, the forest is still lit by the most minor of the forest s
   * can pick and consume mushrooms
   * has a mane which grows in length with his wisdom
 * There is Icho who
-  * holds on to Falaj's mane  
-  
-  
-
-
-
-
-
-
-
-
-
-
+  * holds on to Falaj's mane
+  * joins the Fairies contained by a saturated Cairn
+* There are Buds who
+  * are stationary
+  * each have a backstory which
+    * has many segments, each of which
+      * increases Falaj' wisdom when divulged
+      * occupies a certain tier of intimacy which
+        * has a divulgence likelihood which
+          * expresses how likely a Bud is to divulge the segments it contains to a listener
+          * varies with the mushroom-induced charisma of the listener
+        * determines the amount by which Falaj's wisdom increases when it is divulged
+  * divulge segments of their backstory to Falaj
+* There are Fairies who
+  * only appear at night at a rate which
+    * varies with the brightness of the Moon
+  * float aimlessly by default
+  * float toward a Cairn if they are in its Fairy attraction radius
+* There are Blue Spirits who
+  * appear at saturated Cairns if Icho is present
+  * are more likely to appear at larger Cairns
+  * provide Falaj with Flowers
+* There are Flowers which
+  * can gain their holder entrance to the Wisdom Dispensary
+* There is a Wisdom Dispensary which
+  * is concealed
+  * has an interior
+  * appears to Falaj if he is carrying enough Flowers
+  * may be entered
+* There is Our Natural Father who
+  * resides in the Wisdom Dispensary
+  * Falaj can interact with one time before the Wisdom Dispensary disappears again
+  * gives Falaj a Wisdom Nugget
