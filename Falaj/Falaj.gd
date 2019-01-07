@@ -7,21 +7,28 @@ export var jump = 900
 export var ground_friction = .3
 export var air_friction = .4
 export var accel = 300
+var direction = 0
 
 
 func _physics_process(delta):
 	move()
+	throw()
+
+func throw():
+	if Input.is_action_pressed('throw'):
+		$TheArms.throw(direction)
 
 func move():
 	var friction = false
-	
 	
 	current_speed = move_and_slide(current_speed, UP)
 	
 	if Input.is_action_pressed('right'):
 		current_speed.x = min(current_speed.x + accel, max_speed)
+		direction = 1
 	elif Input.is_action_pressed('left'):
 		current_speed.x = max(current_speed.x - accel, -max_speed)
+		direction = -1
 	else:
 		friction = true
 	

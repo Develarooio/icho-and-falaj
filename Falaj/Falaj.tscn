@@ -1,9 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Falaj/Falaj.gd" type="Script" id=1]
 [ext_resource path="res://Falaj/default_square.png" type="Texture" id=2]
-
-
+[ext_resource path="res://Falaj/Arm/TheArms.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -17,6 +16,12 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+max_speed = 1000
+gravity = 25
+jump = 900
+ground_friction = 0.3
+air_friction = 0.4
+accel = 300
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -25,5 +30,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[node name="TheArms" parent="." index="2" instance=ExtResource( 3 )]
 
 

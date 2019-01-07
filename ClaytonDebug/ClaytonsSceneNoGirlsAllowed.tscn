@@ -31,11 +31,5 @@ __meta__ = {
 [node name="Falaj" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 357, 315 )
-max_speed = 1000
-gravity = 25
-jump = 900
-ground_friction = 0.3
-air_friction = 0.4
-accel = 300
 
 
