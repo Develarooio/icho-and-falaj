@@ -8,15 +8,28 @@ export var ground_friction = .3
 export var air_friction = .4
 export var accel = 300
 var direction = 0
+var arm_length
 
+func _ready():
+	arm_length = $Arms.get_arm_length()
 
 func _physics_process(delta):
-	move()
-	throw()
+	if !$Arms.grabbed:
+		move()
+		throw()
+	else:
+		swing()
+
+func swing():
+	var grab_point = $Arms.get_grab_point()
+	print(grab_point)
+	var arm_vector = grab_point - global_position
+	current_speed = (arm_vector.tangent()*Vector2(-1,-1)).normalized()*Vector2(current_speed.x, current_speed.x)
+	move_and_slide(current_speed, UP)
 
 func throw():
 	if Input.is_action_pressed('throw'):
-		$TheArms.throw(direction)
+		$Arms.throw(direction)
 
 func move():
 	var friction = false

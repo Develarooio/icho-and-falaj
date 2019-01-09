@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tilesets/BasicPlatform/black_walls.tres" type="TileSet" id=1]
 [ext_resource path="res://Falaj/Falaj.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Tilesets/BasicSwingPoint/test_swing..tres" type="TileSet" id=3]
+[ext_resource path="res://Tilesets/BasicSwingPoint/SwingPointStaticBody.tscn" type="PackedScene" id=4]
 
 [node name="ClaytonsSceneNoGirlsAllowed" type="Node2D" index="0"]
 
@@ -31,7 +32,7 @@ __meta__ = {
 
 [node name="Falaj" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 357, 315 )
+position = Vector2( 580, 414 )
 
 [node name="SwingPoints" type="TileMap" parent="." index="2" groups=[
 "grabable",
@@ -49,10 +50,15 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
+collision_layer = 3
+collision_mask = 3
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 327688, 0, 0 )
+tile_data = PoolIntArray(  )
+_sections_unfolded = [ "Collision" ]
+
+[node name="SwingPointStaticBody" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 716.022, 221.09 )
 
 
