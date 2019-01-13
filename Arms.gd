@@ -15,7 +15,6 @@ func _physics_process(delta):
 	if grabbed:
 		$AnimationPlayer.stop()
 		rotation = global_position.angle_to(get_grab_point())
-		print(rotation)
 
 func throw(direction):
 	if direction == -1:
@@ -26,7 +25,7 @@ func throw(direction):
 func set_grabbed(booly):
 	grabbed = booly
 
-func get_arm_length():
+func get_max_arm_length():
 	return $Grabray.cast_to.y
 
 func get_grab_point():
