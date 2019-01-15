@@ -9,6 +9,7 @@ export var air_friction = .4
 export var accel = 300
 var direction = 0
 var max_arm_length
+var initial_h_speed = null
 
 func _ready():
 	max_arm_length = $Arms.get_max_arm_length()
@@ -22,16 +23,13 @@ func _physics_process(delta):
 
 func swing():
 	var grab_point = $Arms.get_grab_point()
+	print(grab_point)
 	var arm_vector = grab_point - global_position
 	var tangent_vector = arm_vector.tangent().normalized()*-1
 	var normalized_gravity = Vector2(0,gravity).normalized()
 	var gravity_contribution = tangent_vector.normalized().dot(normalized_gravity)
-	#What if we hit it from above somehow?
-	current_speed = tangent_vector*current_speed.x
+	current_speed = tangent_vector*300
 	current_speed += Vector2(gravity_contribution*20,gravity_contribution*20)
-	print(gravity_contribution)
-	print('-----')
-	print(current_speed)
 	move_and_slide(current_speed, UP)
 
 func throw():

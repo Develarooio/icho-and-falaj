@@ -30,4 +30,4 @@ func get_max_arm_length():
 
 func get_grab_point():
 	if grabbed:
-		return $Grabray.get_collision_point()
+		return $Grabray.get_collider().global_position
