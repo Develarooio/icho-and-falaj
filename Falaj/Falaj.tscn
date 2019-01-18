@@ -3,8 +3,6 @@
 [ext_resource path="res://Falaj/Falaj.gd" type="Script" id=1]
 [ext_resource path="res://Falaj/default_square.png" type="Texture" id=2]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -12,11 +10,18 @@ extents = Vector2( 32, 32 )
 
 [node name="Falaj" type="KinematicBody2D"]
 
+position = Vector2( 4.20471, 8.40948 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+max_speed = 1000
+gravity = 25
+jump = 900
+ground_friction = 0.3
+air_friction = 0.4
+accel = 300
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -25,5 +30,32 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+offset = Vector2( 0, -200 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 2, 2 )
+limit_left = -50000
+limit_top = -50000
+limit_right = 500000
+limit_bottom = 500000
+limit_smoothed = false
+drag_margin_h_enabled = false
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 100.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit", "Offset", "Smoothing", "Transform" ]
 
 

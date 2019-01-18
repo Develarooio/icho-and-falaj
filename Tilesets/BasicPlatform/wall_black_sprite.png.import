@@ -7,7 +7,10 @@ path="res://.import/wall_black_sprite.png-8916146ab65589a8a8823302109fbfeb.stex"
 [deps]
 
 source_file="res://Tilesets/BasicPlatform/wall_black_sprite.png"
+source_md5="6afd2194258665355272177168e3c9a1"
+
 dest_files=[ "res://.import/wall_black_sprite.png-8916146ab65589a8a8823302109fbfeb.stex" ]
+dest_md5="a1b1061fa3b8989b3b3609dc9961a3df"
 
 [params]
 

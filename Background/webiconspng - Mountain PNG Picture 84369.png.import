@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/webiconspng - Mountain PNG Picture 84369.png-61c9d828f8774d7582d984922dc8f367.stex"
+
+[deps]
+
+source_file="res://Background/webiconspng - Mountain PNG Picture 84369.png"
+source_md5="565757379cd757d552813396ff9d942f"
+
+dest_files=[ "res://.import/webiconspng - Mountain PNG Picture 84369.png-61c9d828f8774d7582d984922dc8f367.stex" ]
+dest_md5="26b0285301c83271f5cedda17c57a7b2"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=2
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

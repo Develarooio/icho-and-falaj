@@ -7,7 +7,10 @@ path="res://.import/default_square.png-41b742163ba7d560de8c4ff7dda0b25f.stex"
 [deps]
 
 source_file="res://Falaj/default_square.png"
+source_md5="4587ed68a8ecc1a4c97ebda16b903d77"
+
 dest_files=[ "res://.import/default_square.png-41b742163ba7d560de8c4ff7dda0b25f.stex" ]
+dest_md5="0ce9a2e546fa9e0acdc99f3dc75130c4"
 
 [params]
 
