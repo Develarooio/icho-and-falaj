@@ -49,6 +49,8 @@ func swing(delta):
 	current_speed = -1*adjusted_speed/delta
 	move_and_slide(current_speed, UP)
 
+	if Input.is_action_just_released("throw"):
+		$Arms.set_grabbed(false)
 func throw():
 	if Input.is_action_pressed('throw'):
 		$Arms.throw(direction)
