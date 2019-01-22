@@ -32,18 +32,25 @@ func swing(delta):
 	if initial_swing == true:
 		grab_length = arm_vector.length()
 
-	var tangent_vector = arm_vector.tangent().normalized()
+	var counter_clockwise_vector = arm_vector.tangent().normalized()
+	var potential_vector = counter_clockwise_vector
 	
 	var height = grab_length - (global_position.y - grab_point.y)
 	
 	if arm_vector.x > 0 and arm_vector.y <= 0:
-		tangent_vector *= Vector2(-1,-1)
+		potential_vector *= Vector2(-1,-1)
 	elif arm_vector.x >= 0 and arm_vector.y > 0:
-		tangent_vector *= Vector2(-1,-1)
+		potential_vector *= Vector2(-1,-1)
 	
-	var potential = tangent_vector*height
+	potential_vector *= height
 	
-	current_speed += potential
+	current_speed += potential_vector
+	
+	#Player input
+	if Input.is_action_pressed("right"):
+		current_speed += counter_clockwise_vector*Vector2(-1,-1)*3
+	elif Input.is_action_pressed("left"):
+		current_speed += counter_clockwise_vector*3
 	
 	#Adjust speed to land on tangent line
 	var next_position = global_position + delta*current_speed
@@ -53,7 +60,7 @@ func swing(delta):
 	current_speed = -1*adjusted_speed/delta
 	move_and_slide(current_speed, UP)
 	
-	initial_swing = false
+	#Check for release
 	if Input.is_action_just_released("throw"):
 		$Arms.set_grabbed(false)
 		initial_swing = true
