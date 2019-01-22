@@ -13,6 +13,7 @@ var initial_h_speed = null
 var initial_swing = true
 var grab_length = null
 
+
 func _ready():
 	max_arm_length = $Arms.get_max_arm_length()
 
@@ -27,19 +28,22 @@ func swing(delta):
 	var grab_point = $Arms.get_grab_point()
 	var arm_vector = (grab_point - global_position)
 	
+	#Temporary until hand hit box is created	
 	if initial_swing == true:
 		grab_length = arm_vector.length()
-		initial_swing = false
 
 	var tangent_vector = arm_vector.tangent().normalized()
-
-	if current_speed.x >= 0:
-		tangent_vector*=Vector2(-1,-1)
-	var height = global_position.y - grab_point.y
-	if round(height) == 0:
-		current_speed = tangent_vector*-100
-	else:
-		current_speed = (tangent_vector*height)*6
+	
+	var height = grab_length - (global_position.y - grab_point.y)
+	
+	if arm_vector.x > 0 and arm_vector.y <= 0:
+		tangent_vector *= Vector2(-1,-1)
+	elif arm_vector.x >= 0 and arm_vector.y > 0:
+		tangent_vector *= Vector2(-1,-1)
+	
+	var potential = tangent_vector*height
+	
+	current_speed += potential
 	
 	#Adjust speed to land on tangent line
 	var next_position = global_position + delta*current_speed
@@ -48,9 +52,12 @@ func swing(delta):
 	
 	current_speed = -1*adjusted_speed/delta
 	move_and_slide(current_speed, UP)
-
+	
+	initial_swing = false
 	if Input.is_action_just_released("throw"):
 		$Arms.set_grabbed(false)
+		initial_swing = true
+
 func throw():
 	if Input.is_action_pressed('throw'):
 		$Arms.throw(direction)
